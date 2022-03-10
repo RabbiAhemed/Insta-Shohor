@@ -24,6 +24,7 @@ const reportPost = (id) => {
   reportedPostsId.push(id);
   const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
   showPosts(remainingPosts);
+
 };
 
 const displayContent = (text) => {
@@ -51,7 +52,6 @@ const switchTab = (id) => {
 };
 
 const createPost = (post) => {
-  console.log(post);
   const image = post.image;
   const div = document.createElement("article");
   div.classList.add("post");
@@ -141,6 +141,7 @@ const showPosts = (posts) => {
     const div = createPost(post);
     productsContainer.appendChild(div);
   });
+
 };
 
 const displayLikedPosts = () => {
@@ -153,9 +154,10 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
   const reportedPosts = getReportedPosts();
-  posts.forEach((post) => {
+  reportedPosts.forEach((post) => {
     const div = createPost(post);
     document.getElementById("reported").appendChild(div);
+    console.log(reportedPosts);
   });
 };
 
