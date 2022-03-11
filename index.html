@@ -57,23 +57,44 @@
             <h1>Reported posts</h1>
         </div>
     </main>
-    <section id="question" class="ms-5">
-        <h3><b>Q1. How javascript works?</b></h3>
-        <p><b>Ans:</b>javascript is an interpretive and single threaded language.javascript can execute one command at a
-            time that it can only go to the next line once the current line has been finished executing.javascript codes
-            run in top to bottom order.javascript runs
+    <section id="question" class="mx-3">
+        <h3><b>Q1. How does javascript work?</b></h3>
+        <p><b>Ans: </b>javascript is an interpretive and single threaded language.javascript can execute one command at
+            a
+            time which means it can only go to the next line once the current line has been finished
+            executing.javascript
+            codes
+            run in top to bottom order.javascript runs in the browser
             using V8 engine,it understands and runs the
-            code.When a javascript program runs
+            code.it interpretes line by line.When a javascript program runs
             inside a browser,the browsers engine receives and runs the source code to get output.there is a thing called
             parser that receives the code and checks for sytactic errors line by line.If any error is detected,it throws
             an error and stops executing the code.if no error is found,it creates a data structure which is Abstract
-            Syntax Tree.After that the code is converted by javascript enginee and sent to the system to be execute.Then
-            it is run by the system or the engine.
+            Syntax Tree.After that the code is converted by javascript enginee and byte code is sent to the system to be
+            execute.Then
+            it is run by the system or the engine.V8 also has an internal thing called JIT which is just in time
+            compiler.it also compiles the code at the same time for a quick compilation.
+
         </p>
-        <h3><b>Q2. What does javascript event loop do?</b></h3>
-        <p><b>Ans:</b> A quick brown fox jumps over the lazy dog</p>
-        <h3><b>Q3. Local Storage vs Session Storage?</b></h3>
-        <p><b>Ans:</b> A quick brown fox jumps over the lazy dog</p>
+        <h3><b>Q2. Local Storage vs Session Storage?</b></h3>
+        <p><b>Ans:</b> Local storage and session storage are almost similar but there is a bit difference.Local storage
+            and session storage are used to store data in the browser
+            Session
+            storage’s data is
+            wiped or cleared when a particular session or tab is closed.and opening a new tab creates a new session
+            storage for that particular tab.if the tab or browser is closed the session storage will be lost.Session
+            storage is for one browsing session and it is removed as soon as the user closes the tab where that session
+            was set. While local storage is around forever until the user deletes it.In a word session storage’s data is
+            persisted until the tab or window is closed.
+            The main difference is that local storage’s data does not expire,the data is shared across, data is
+            persisted even after closing the session or tab.local storage’s objects
+            properties can be set by using setItem() and then can be accessed/retrieved by using getItem().Also
+            deletion/removal
+            is possible using removeItem()
+        </p>
+        <h3><b>Q3. What does javascript event loop do?</b></h3>
+        <p><b>Ans:</b> The event loop always checks the call stack.if the call stack is empty a new function will be
+            added from the event que and if not empty the current function call will be processed.</p>
     </section>
     <footer>
     </footer>
